@@ -1,0 +1,70 @@
+---
+title: "Analysis of NEON Woody Plant Vegetation Structure Data"
+author: "Sophie Lyth"
+date: "2020-05-07"
+output: 
+  html_document:
+    toc: true
+    toc_float: true
+    theme: spacelab
+    highlight: tango
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Background 
+
+This data product contains the quality-controlled, **native sampling resolution data from in-situ measurements of live and standing dead woody individuals and shrub groups, from all terrestrial NEON sites with qualifying woody vegetation**. The exact measurements **collected per individual depend on growth form**, and these measurements are focused on enabling biomass and productivity estimation, estimation of shrub volume and biomass, and calibration / validation of multiple NEON airborne remote-sensing data products.
+
+In general, **comparatively large individuals that are visible to remote-sensing instruments are mapped, tagged and measured, and other smaller individuals are tagged and measured but not mapped**. Smaller individuals may be subsampled according to a nested subplot approach in order to standardize the per plot sampling effort. Structure and mapping data are reported per individual per plot; sampling metadata, such as per growth form sampling area, are reported per plot.
+
+## Data
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+knitr::read_chunk(here::here("analysis.R"))
+```
+
+```{r analysis-setup}
+
+```
+
+```{r}
+summary(individual)
+```
+
+```{r}
+DT::datatable(individual)
+```
+```{r analysis-filter-data}
+
+```
+
+```{r analysis-set-factor-levels}
+
+```
+
+```{r analysis-fig1-barplot, fig.cap="Figure 1: Counts of growth forms"}
+
+```
+
+```{r analysis-fig2-violinplots}
+
+```
+
+```{r analysis-lm-overall}
+
+```
+
+```{r analysis-lm-fig3-overall}
+
+```
+
+```{r analysis-lm-growth}
+
+```
+
+```{r analysis-m-fig4-growth}
+
+```
